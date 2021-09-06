@@ -1,0 +1,49 @@
+.form {
+    padding: 40px 20px;
+    margin-top: 20px;
+    margin-bottom: 80px;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid;
+    border-radius: 30px;
+    width: 70%;
+}
+
+.rows-container {
+    padding-bottom: 60px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.row:nth-child(n+2) {
+    margin-top: 30px;
+}
+
+.input {
+    width: 50%;
+    font-size: 30px;
+    border: 2px solid tan;
+    border-radius: 5px;
+    padding-left: 15px;
+}
+
+.submit-button {
+    font-size: 25px;
+    cursor: pointer;
+    padding: 8px;
+    align-self: center;
+    border: 4px solid tan;
+    border-radius: 5px;
+    text-align: center;
+    width: 25%;
+}
+
+/* imgs-container */
+
