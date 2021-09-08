@@ -2,9 +2,8 @@ const imgT = (src, alt) => ({
     block: 'img',
     cls: 'img',
     attrs: {
-        'src': src,
-        'alt': alt,
-    }
+        src, alt,
+    },
 });
 
 const deleteContainerT = {
@@ -14,7 +13,7 @@ const deleteContainerT = {
         block: 'div',
         cls: 'delete-button',
         content: 'X',
-    }
+    },
 };
 
 const imgContainerT = (src, alt) => ({

@@ -19,8 +19,7 @@ export default class Form {
 
         try {
             await this.imgsContainer.addImg(srcValue, altValue);
-        }
-        catch(e) {
+        } catch (error) {
             const html = engine(errorUrlT);
             if (!this.error) {
                 this.container.insertAdjacentHTML('afterend', html);
@@ -35,5 +34,4 @@ export default class Form {
         this.inputLink.value = '';
         this.inputName.value = '';
     }
-
 }

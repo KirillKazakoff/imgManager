@@ -6,19 +6,19 @@ export default class ImgsContainer {
     constructor() {
         this.container = document.querySelector('.imgs-container');
 
-        this.container.addEventListener('click', (e) => this.onDelete(e));
+        this.container.addEventListener('click', (e) => ImgsContainer.onDelete(e));
     }
 
-    async loadImage(url) {
+    static async loadImage(url) {
         return new Promise((resolve, reject) => {
             const img = document.createElement('img');
-            
+
             img.addEventListener('load', () => {
                 resolve();
-            })
+            });
             img.addEventListener('error', () => {
                 reject();
-            })
+            });
 
             img.src = url;
         });
@@ -26,16 +26,15 @@ export default class ImgsContainer {
 
     async addImg(src, alt) {
         try {
-            await this.loadImage(src);
+            await ImgsContainer.loadImage(src);
             const html = engine(imgContainerT(src, alt));
             this.container.innerHTML += html;
-        }
-        catch (e) {
+        } catch (e) {
             throw new Error('something went wrong');
         }
     }
 
-    onDelete(e) {
+    static onDelete(e) {
         if (e.target.className.includes('delete')) {
             const container = e.target.closest('.img-container');
             container.remove();
