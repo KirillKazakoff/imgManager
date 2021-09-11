@@ -12,19 +12,14 @@ export default class ImgsContainer {
     static async loadImage(url) {
         return new Promise((resolve, reject) => {
             if (url) {
-                try {
-                    (async () => {
-                        const response = await fetch(url);
-                        if (response.ok) {
-                            resolve();
-                        }
-                        if (response.status === 404) {
-                            reject();
-                        }
-                    })();
-                } catch (e) {
-                    reject();
-                }
+                fetch(url).then((response) => {
+                    if (response.ok) {
+                        resolve();
+                    }
+                    if (response.status === 404) {
+                        reject();
+                    }
+                }).catch(() => reject());
             } else throw new Error('empty error');
         });
         // return new Promise((resolve, reject) => {
