@@ -7,11 +7,9 @@ function generateHtml(block, cls, content, attrs) {
 }
 
 export default function engine(node) {
-    if ((node === false) || (node === undefined) || (node === null)) {
-        return '';
-    }
+    if (!node && typeof node !== 'number') return '';
 
-    if ((node === true) || (typeof node === 'string') || (typeof node === 'number')) {
+    if ((typeof node === 'string') || (typeof node === 'number') || (node === true)) {
         return node;
     }
 
