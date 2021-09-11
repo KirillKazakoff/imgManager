@@ -7,9 +7,9 @@ function generateHtml(block, cls, content, attrs) {
 }
 
 export default function engine(node) {
-    if (!node && typeof node !== 'number') return '';
+    if (!node) return '';
 
-    if ((typeof node === 'string') || (typeof node === 'number') || (node === true)) {
+    if (typeof node === 'string') {
         return node;
     }
 
