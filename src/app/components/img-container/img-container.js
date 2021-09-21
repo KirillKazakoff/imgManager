@@ -22,41 +22,6 @@ export default class ImgsContainer {
                 }).catch(() => reject());
             } else throw new Error('empty error');
         });
-        // return new Promise((resolve, reject) => {
-        //     try {
-        //         const xhr = new XMLHttpRequest();
-        //         xhr.open('GET', url);
-
-        //         xhr.send();
-        //         xhr.onerror = function (e) {
-        //             console.log('something went wrong');
-        //         };
-
-        //         xhr.onload = function () {
-        //             if (this.status !== 200) {
-        //                 reject();
-        //             }
-        //             resolve();
-        //         };
-
-        //         xhr.onloadend = function () {
-        //             if (xhr.status === 404) {
-        //                 console.log('what happpened bruh');
-        //                 reject();
-        //             }
-        //         };
-        //     } catch (e) {
-        //         throw new Error(e);
-        //     }
-
-        // img.addEventListener('load', () => {
-        //     resolve();
-        // });
-        // img.addEventListener('error', () => {
-        //     reject();
-        // });
-
-        // img.src = url;
     }
 
     async addImg(src, alt) {
