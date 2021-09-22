@@ -1,1 +1,1 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/0qwwv0534jon3v0e?svg=true)](https://ci.appveyor.com/project/KirillKazakoff/yarn-cd)
+[![Build status](https://ci.appveyor.com/api/projects/status/qfktb6g430t9udjb?svg=true)](https://ci.appveyor.com/project/KirillKazakoff/imgmanager)
